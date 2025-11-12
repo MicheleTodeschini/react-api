@@ -6,9 +6,9 @@ img {
 }
 
 .card {
-  max-height: 1000px;
+  height: 700px;
 }
 
 .card-top img {
-  max-height: 400px;
+  height: 300px;
 }
