@@ -7,15 +7,16 @@ function App() {
   const [attrici, setAttrici] = useState([])
   const url = ' https://lanciweb.github.io/demo/api/actresses/'
 
+  useState(handleClick, [])
+
 
     function handleClick() {
       axios
       .get(url)
-      .then(response=>
-        setAttrici(response.data.results)
+      .then(response=> 
+        setAttrici(response.data)   //se mettessi .data.response mi si rompe  
       )
     }
-
 
   return (
     <>
