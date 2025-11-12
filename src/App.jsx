@@ -14,7 +14,7 @@ function App() {
       axios
       .get(url)
       .then(response=> 
-        setAttrici(response.data)   //se mettessi .data.response mi si rompe  
+        setAttrici(response.data)   
       )
     }
 
