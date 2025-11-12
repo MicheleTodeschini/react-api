@@ -1,2 +1,14 @@
 @import url('bootstrap');
 @import url('bootstrap-icons');
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  max-height: 1000px;
+}
+
+.card-top img {
+  max-height: 400px;
+}

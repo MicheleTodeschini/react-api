@@ -22,16 +22,22 @@ function App() {
     <>
     <h1>Lista di attrici</h1>
 
-    <div className='row'>
-    <ul className='list-unstyled'>
+    <div className=''>
+    <ul className='list-unstyled row d-flex'>
     {
       attrici.map(attrice => (
-        <li key={attrice.id} className='col-6' >
-          <img  src={attrice.image} className='width-100' alt={attrice.name} />
-          <p>{attrice.name}</p>
-          <p>{attrice.birth_year}</p>
-          <p>{attrice.biography}</p>
-          <p>{attrice.awards}</p>
+        <li key={attrice.id} className='col-4' >
+          <div className='card'>
+            <div className='card-top'>
+          <img  src={attrice.image} className='' alt={attrice.name} />
+            </div>
+            <div className='card-bottom'>
+          <p>Nome: {attrice.name}</p>
+          <p>Anno di nascita: {attrice.birth_year}</p>
+          <p>Biografia: {attrice.biography}</p>
+          <p>Premi: {attrice.awards}</p>
+            </div>
+          </div>
         </li>
       ))
     }
