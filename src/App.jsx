@@ -8,6 +8,7 @@ function App() {
   const [attori, setAttori] = useState([])
   const url = ' https://lanciweb.github.io/demo/api/actresses/'
   const urlAttori = '  https://lanciweb.github.io/demo/api/actors/'
+  const totale = [...attori, ...attrici]
 
   useEffect(ottenereAttrici, [])
   useEffect(ottenereAttori, [])
@@ -31,7 +32,38 @@ function App() {
 
   return (
     <>
-    <h1>Lista di attrici</h1>
+
+          <h1>Lista di attrici e attori </h1>
+
+    <div className=''>
+    <ul className='list-unstyled row d-flex'>
+    {
+      totale.map(tutti => (
+        <li key={tutti.name} className='col-4 py-3' >
+          <div className='card'>
+            <div className='card-top'>
+          <img  src={tutti.image} className='' alt={tutti.name} />
+            </div>
+            <div className='card-bottom'>
+          <p><strong>Nome:</strong> {tutti.name}</p>
+          <p><strong>Anno di nascita:</strong> {tutti.birth_year}</p>
+          <p><strong>Biografia: </strong>{tutti.biography}</p>
+          <p><strong>Premi: </strong>{tutti.awards}</p>
+            </div>
+          </div>
+        </li>
+      ))
+    }
+    </ul>
+    </div>
+
+
+
+
+
+
+    {
+      /*<h1>Lista di attrici</h1>
 
     <div className=''>
     <ul className='list-unstyled row d-flex'>
@@ -77,6 +109,7 @@ function App() {
     }
       </ul>
     </div>
+    */}
     
     </>
   )
