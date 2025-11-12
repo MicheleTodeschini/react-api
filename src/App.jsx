@@ -20,6 +20,16 @@ function App() {
   return (
     <>
     <h1>Lista di attrici</h1>
+
+    <ul className='list-unstyled'>
+    {
+      attrici.map(attrice => (
+        <li key={attrice.id}>
+          <img  src={attrice.image} />
+        </li>
+      ))
+    }
+    </ul>
     </>
   )
 }
